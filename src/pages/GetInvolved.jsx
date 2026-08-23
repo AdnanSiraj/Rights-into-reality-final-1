@@ -1,0 +1,244 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+const GetInvolved = () => {
+  const [formState, setFormState] = useState({
+    name: '',
+    email: '',
+    interest: '',
+    message: ''
+  });
+  const [submitStatus, setSubmitStatus] = useState(null); // null, 'success', 'error'
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormState(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here we would normally send the data to a server
+    // For now, we'll just simulate a successful submission
+    setSubmitStatus('success');
+    // Reset form
+    setFormState({
+      name: '',
+      email: '',
+      interest: '',
+      message: ''
+    });
+  };
+
+  return (
+    <div>
+      {/* Page Header */}
+      <section className="bg-navy-900 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+            Get Involved
+          </h1>
+          <p className="text-xl sm:text-2xl mb-6">
+            Turning Rights into Reality
+          </p>
+        </div>
+      </section>
+
+      {/* Introduction */}
+      <section className="bg-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-gray-700 text-lg leading-relaxed text-center">
+            There are many ways to support our mission. Whether you want to volunteer your time, partner with us, or make a donation, your contribution helps us turn rights into reality for communities in Upper Swat and beyond.
+          </p>
+        </div>
+      </section>
+
+      {/* Volunteer Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12 text-navy-900">
+            Volunteer
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed text-center mb-8">
+            Join our team of dedicated volunteers and make a direct impact in the community.
+          </p>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="bg-white p-6 rounded-lg shadow flex flex-col items-center text-center">
+              <div className="text-amber-400 text-4xl mb-3">👨‍🏫</div>
+              <h3 className="text-xl font-semibold mb-2 text-navy-900">Education Support</h3>
+              <p className="text-gray-600 text-sm">
+                Assist with tutoring, mentoring, or conducting workshops in schools.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow flex flex-col items-center text-center">
+              <div className="text-amber-400 text-4xl mb-3">🌱</div>
+              <h3 className="text-xl font-semibold mb-2 text-navy-900">Environmental Action</h3>
+              <p className="text-gray-600 text-sm">
+                Participate in tree plantation, clean-up drives, or garden projects.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow flex flex-col items-center text-center">
+              <div className="text-amber-400 text-4xl mb-3">🤝</div>
+              <h3 className="text-xl font-semibold mb-2 text-navy-900">Community Outreach</h3>
+              <p className="text-gray-600 text-sm">
+                Help with awareness campaigns, surveys, or community events.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partner Section */}
+      <section className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12 text-navy-900">
+            Partner with Us
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed text-center mb-8">
+            We welcome partnerships with schools, NGOs, businesses, and government agencies to amplify our impact.
+          </p>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-semibold mb-2 text-navy-900">Schools & Educational Institutions</h3>
+              <p className="text-gray-700">
+                Collaborate on program implementation, resource sharing, and joint initiatives.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-semibold mb-2 text-navy-900">NGOs & Community Organizations</h3>
+              <p className="text-gray-700">
+                Partner on projects, share best practices, and coordinate efforts for greater reach.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-semibold mb-2 text-navy-900">Businesses & Corporates</h3>
+              <p className="text-gray-700">
+                Engage in corporate social responsibility (CSR) initiatives, sponsorships, or employee volunteering programs.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="text-xl font-semibold mb-2 text-navy-900">Government Agencies</h3>
+              <p className="text-gray-700">
+                Work together on policy advocacy, program scaling, and public service delivery.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Donate Section */}
+      <section className="bg-amber-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-8 text-navy-900">
+            Support Our Work
+          </h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Your donation helps us continue our vital work in education, climate action, human rights, and youth leadership.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-navy-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-navy-800 transition-colors">
+              Donate Now
+            </button>
+            <p className="text-sm text-gray-500">
+              *Donation processing integration coming soon
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact / Interest Form */}
+      <section className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12 text-navy-900">
+            Contact Us
+          </h2>
+          {/* Form Status Messages */}
+          {submitStatus === 'success' && (
+            <div className="mb-6 p-4 bg-amber-100 text-amber-800 rounded-lg">
+              Thank you for your message! We'll get back to you soon.
+            </div>
+          )}
+          {submitStatus === 'error' && (
+            <div className="mb-6 p-4 bg-red-100 text-red-800 rounded-lg">
+              There was an error submitting your form. Please try again.
+            </div>
+          )}
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formState.name}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400"
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formState.email}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400"
+              />
+            </div>
+            <div>
+              <label htmlFor="interest" className="block text-sm font-medium text-gray-700 mb-2">
+                I'm interested in:
+              </label>
+              <select
+                id="interest"
+                name="interest"
+                value={formState.interest}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400"
+              >
+                <option value="">Select an option</option>
+                <option value="volunteering">Volunteering</option>
+                <option value="partnering">Partnering</option>
+                <option value="donating">Donating</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                value={formState.message}
+                onChange={handleChange}
+                rows="5"
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400"
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-navy-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-navy-800 transition-colors disabled:opacity-50"
+              disabled={submitStatus === 'submitting'}
+            >
+              {submitStatus === 'submitting' ? 'Sending...' : 'Send Message'}
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default GetInvolved;
