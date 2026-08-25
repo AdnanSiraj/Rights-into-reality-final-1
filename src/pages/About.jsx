@@ -61,7 +61,7 @@ const About = () => {
             Rights Into Reality Organization began with a simple belief: that every person in the rural communities of Upper Swat, Khyber Pakhtunkhwa, Pakistan, deserves the opportunity to learn, grow, and thrive. Founded by local educators and community leaders, we started by conducting awareness seminars in a handful of schools, focusing on the importance of education and environmental stewardship.
           </p>
           <p className="text-gray-700 text-lg leading-relaxed mt-6">
-            Over time, our work expanded to include climate action initiatives, human rights workshops, and youth leadership programs. We remain rooted in the communities we serve, ensuring that our initiatives are designed with, not just for, the people of Upper Swat.
+            Over time, our work expanded to include climate action initiatives, human rights workshops, and youth leadership programs. We remain rooted in the communities we serve, ensuring that our initiatives are designed with, not just for, the people of Pakistan.
           </p>
         </div>
       </section>
@@ -130,9 +130,6 @@ const About = () => {
                   <a href="/team/cv/adnan-siraj-cv.pdf" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-amber-600 hover:text-amber-500">
                     View CV →
                   </a>
-                  <a href="/team/portfolio/adnan-siraj-portfolio.pdf" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-amber-600 hover:text-amber-500">
-                    View Portfolio →
-                  </a>
                 </div>
               </div>
             </div>
@@ -154,9 +151,6 @@ const About = () => {
                   <a href="/team/cv/nasar-shah-mian-cv.pdf" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-amber-600 hover:text-amber-500">
                     View CV →
                   </a>
-                  <a href="/team/portfolio/nasar-shah-mian-portfolio.pdf" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-amber-600 hover:text-amber-500">
-                    View Portfolio →
-                  </a>
                 </div>
               </div>
             </div>
@@ -177,9 +171,6 @@ const About = () => {
                 <div className="flex flex-wrap gap-4">
                   <a href="/team/cv/jamshaid-ahmed-cv.pdf" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-amber-600 hover:text-amber-500">
                     View CV →
-                  </a>
-                  <a href="/team/portfolio/jamshaid-ahmed-portfolio.pdf" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-amber-600 hover:text-amber-500">
-                    View Portfolio →
                   </a>
                 </div>
               </div>
