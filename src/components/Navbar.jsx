@@ -3,12 +3,10 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav className="bg-navy-900 text-white p-4">
-      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
-        <Link to="/" className="flex items-center space-x-3 text-2xl font-bold">
-          <span className="text-amber-400">RIR</span>
-          <span>Rights Into Reality</span>
-        </Link>
+    <Link to="/" className="flex items-center space-x-3 text-2xl font-bold">
+  <img src="/logo.svg" alt="Rights Into Reality" className="h-9 w-auto" />
+  <span>Rights Into Reality</span>
+</Link>
         <div className="flex space-x-4">
           <Link to="/about" className="hover:text-amber-300 transition-colors">
             About
