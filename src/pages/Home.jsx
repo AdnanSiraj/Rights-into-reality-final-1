@@ -164,7 +164,7 @@ const Home = () => {
                       src={activity.photo}
                       alt={activity.title}
                       loading="lazy"
-                      className="w-full h-40 object-cover object-center"
+                      className="w-full h-40 object-cover object-top"
                     />
                   ) : (
                     <div className="w-full h-40 bg-navy-50 flex items-center justify-center text-navy-300 text-4xl">

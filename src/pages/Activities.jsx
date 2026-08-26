@@ -29,7 +29,7 @@ const Activities = () => {
                     src={activity.photo}
                     alt={activity.title}
                     loading="lazy"
-                    className="w-full h-64 object-cover object-center"
+                    className="w-full h-64 object-cover object-top"
                   />
                 ) : (
                   <div className="w-full h-64 bg-navy-50 flex flex-col items-center justify-center text-navy-300">
