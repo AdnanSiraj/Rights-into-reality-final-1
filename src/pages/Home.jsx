@@ -5,19 +5,27 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-navy-900 via-navy-800 to-navy-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-            Rights Into Reality
-          </h1>
-          <p className="text-xl sm:text-2xl mb-6">
-            Turning Rights into Reality
-          </p>
-          <p className="text-lg mb-8">
-            Empowering communities through education, climate action, and human rights.
-          </div>
-        </div>
-      </section>
+<section className="relative text-white py-20 overflow-hidden bg-navy-900">
+  {/* Background image */}
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
+  ></div>
+  {/* Dark overlay so text stays readable over the image */}
+  <div className="absolute inset-0 bg-gradient-to-b from-navy-900/80 via-navy-800/70 to-navy-900/80"></div>
+
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+      Rights Into Reality
+    </h1>
+    <p className="text-xl sm:text-2xl mb-6">
+      Turning Rights into Reality
+    </p>
+    <p className="text-lg mb-8">
+      Empowering communities through education, climate action, and human rights.
+    </p>
+  </div>
+</section>
 
       {/* Vision & Mission Summary */}
       <section className="bg-white py-16">
