@@ -160,7 +160,12 @@ const Home = () => {
               <Reveal key={activity.slug} delay={i * 100}>
                 <div className="bg-gray-50 rounded-lg shadow h-full flex flex-col overflow-hidden">
                   {activity.photo ? (
-                    <img src={activity.photo} alt={activity.title} className="w-full h-40 object-cover" />
+                    <img
+                      src={activity.photo}
+                      alt={activity.title}
+                      loading="lazy"
+                      className="w-full h-40 object-cover object-center"
+                    />
                   ) : (
                     <div className="w-full h-40 bg-navy-50 flex items-center justify-center text-navy-300 text-4xl">
                       {activity.icon}
