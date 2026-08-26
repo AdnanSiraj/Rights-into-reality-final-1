@@ -15,14 +15,6 @@ const Home = () => {
           </p>
           <p className="text-lg mb-8">
             Empowering communities through education, climate action, and human rights.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/programs" className="bg-amber-400 text-navy-900 px-6 py-3 rounded-lg font-medium hover:bg-amber-300 transition-colors">
-              Our Programs
-            </Link>
-            <Link to="/get-involved" className="bg-white text-navy-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors border border-amber-400">
-              Get Involved
-            </Link>
           </div>
         </div>
       </section>
