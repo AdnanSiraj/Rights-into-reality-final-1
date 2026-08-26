@@ -88,6 +88,8 @@ export const testimonials = [
 
 // Four headline activities shown on the Home page (two per row),
 // each linking to its section on the full Activities page.
+// `photo`: optional thumbnail path in /public/images/activities/ —
+// leave null until a real photo is uploaded.
 export const featuredActivities = [
   {
     slug: 'legal-rights-workshops',
@@ -95,6 +97,7 @@ export const featuredActivities = [
     title: 'Legal Rights Workshops',
     summary:
       'Interactive school sessions breaking down human rights and legal literacy for students at Abdali Public School, Global International School, and Golden Middle Public School.',
+    photo: null,
   },
   {
     slug: 'climate-change-education',
@@ -102,13 +105,7 @@ export const featuredActivities = [
     title: 'Climate Change Education',
     summary:
       'Workshops helping students understand climate change and their role in building a more resilient, sustainable Swat.',
-  },
-  {
-    slug: 'digital-literacy-sessions',
-    icon: '💻',
-    title: 'Digital Literacy Sessions',
-    summary:
-      'Practical digital skills and online-safety training so students can navigate technology safely and confidently.',
+    photo: null,
   },
   {
     slug: 'tree-plantation-drives',
@@ -116,10 +113,24 @@ export const featuredActivities = [
     title: 'Tree Plantation Drives',
     summary:
       'Community plantation drives that have put 80 trees in the ground so far, restoring green cover across Upper Swat.',
+    photo: '/images/activities/plantation-drive.jpg',
+  },
+  {
+    slug: 'cleanliness-drive',
+    icon: '🧹',
+    title: 'Cleanliness Drive',
+    summary:
+      'Community clean-up drives clearing litter from public spaces, paired with conversations about waste segregation.',
+    photo: '/images/activities/cleanliness-drive.jpg',
   },
 ];
 
 // Full activity write-ups for the dedicated Activities page.
+// `photo`: path to an image in /public/images/activities/ — leave as
+// null until a real photo is uploaded, and the page will show a clean
+// placeholder instead of a broken image.
+// `blog`: a short paragraph or two of story/detail, separate from the
+// one-line `description` used elsewhere.
 export const allActivities = [
   {
     slug: 'legal-rights-workshops',
@@ -128,6 +139,8 @@ export const allActivities = [
     description:
       'We ran interactive legal-rights workshops at Abdali Public School, Global International School, and Golden Middle Public School, helping students understand their fundamental rights and how the law protects them. Sessions used real-world scenarios and discussion rather than lectures, so students left with knowledge they could actually apply.',
     stat: `${impactStats.studentsReached} students reached`,
+    photo: null,
+    blog: null,
   },
   {
     slug: 'climate-change-education',
@@ -136,6 +149,8 @@ export const allActivities = [
     description:
       'Alongside the legal rights sessions, we delivered climate change workshops explaining the science of a warming climate and, more importantly, what students and their communities can do about it — from reducing waste to protecting green spaces.',
     stat: `${impactStats.workshopsConducted} workshops conducted since ${impactStats.since}`,
+    photo: null,
+    blog: null,
   },
   {
     slug: 'digital-literacy-sessions',
@@ -144,6 +159,8 @@ export const allActivities = [
     description:
       'Our digital literacy sessions cover safe and responsible technology use, from basic computer skills to online safety, giving students practical tools for a digitally connected world.',
     stat: `${impactStats.communityMembersEngaged} community members engaged`,
+    photo: null,
+    blog: null,
   },
   {
     slug: 'tree-plantation-drives',
@@ -152,5 +169,19 @@ export const allActivities = [
     description:
       'Since February 2026, our volunteers have led community tree plantation drives across Upper Swat, putting 80 trees in the ground so far and building local awareness of reforestation and land stewardship.',
     stat: `${impactStats.treesPlanted} trees planted since ${impactStats.since}`,
+    photo: '/images/activities/plantation-drive.jpg',
+    blog:
+      'Our volunteers set out early on a cool Swat morning, saplings loaded and spades ready. Working alongside local community members, the team planted trees along degraded slopes and open school grounds, talking through why each species was chosen and how the young trees would be looked after in the months ahead. It was as much a conversation about long-term stewardship as it was a day of digging.',
+  },
+  {
+    slug: 'cleanliness-drive',
+    icon: '🧹',
+    title: 'Cleanliness Drive',
+    description:
+      'Community clean-up drives clearing litter and waste from public spaces in Upper Swat, paired with on-the-spot conversations about waste segregation and responsible disposal.',
+    stat: `${impactStats.communityMembersEngaged} community members engaged`,
+    photo: '/images/activities/cleanliness-drive.jpg',
+    blog:
+      'Armed with gloves and bin bags, our volunteers and student partners spent the morning clearing litter from streets and public spaces around the community. Beyond the clean-up itself, the drive became a chance to talk directly with residents and shopkeepers about waste segregation and why keeping shared spaces clean matters for everyone\u2019s health and the local environment.',
   },
 ];
