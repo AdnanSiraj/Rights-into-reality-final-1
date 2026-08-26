@@ -27,11 +27,11 @@ export const WhatsAppIcon = () => (
 
 export const socialLinks = [
   { name: 'Facebook', icon: FacebookIcon, href: 'https://www.facebook.com/share/1bu22EFNvc/?mibextid=wwXIfr', live: true },
-  { name: 'Instagram', icon: InstagramIcon, href: null, live: false },
-  { name: 'TikTok', icon: TikTokIcon, href: null, live: false },
-  { name: 'LinkedIn', icon: LinkedInIcon, href: null, live: false },
-  { name: 'YouTube', icon: YouTubeIcon, href: null, live: false },
-  { name: 'X (Twitter)', icon: XIcon, href: null, live: false },
+  { name: 'Instagram', icon: InstagramIcon, href: 'https://www.instagram.com/rightsintoreality', live: true },
+  { name: 'TikTok', icon: TikTokIcon, href: 'https://www.tiktok.com/@rightsintoreality', live: true },
+  { name: 'LinkedIn', icon: LinkedInIcon, href: 'https://linkedin.com/company/rightsintorealityorganization', live: true },
+  { name: 'YouTube', icon: YouTubeIcon, href: 'https://www.youtube.com/@rightsintorealityorganization', live: true },
+  { name: 'X (Twitter)', icon: XIcon, href: 'https://x.com/rirorganization', live: true },
 ];
 
 /**
