@@ -58,7 +58,7 @@ const About = () => {
             Our Story
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed">
-            Rights Into Reality Organization began with a simple belief: that every person in the rural communities of Upper Swat, Khyber Pakhtunkhwa, Pakistan, deserves the opportunity to learn, grow, and thrive. Founded by local educators and community leaders, we started by conducting awareness seminars in a handful of schools, focusing on the importance of education and environmental stewardship.
+            Rights Into Reality Organization began with a simple belief: that every person in the rural communities of Pakistan, deserves the opportunity to learn, grow, and thrive. Founded by local educators and community leaders, we started by conducting awareness seminars in a handful of schools, focusing on the importance of education and environmental stewardship.
           </p>
           <p className="text-gray-700 text-lg leading-relaxed mt-6">
             Over time, our work expanded to include climate action initiatives, human rights workshops, and youth leadership programs. We remain rooted in the communities we serve, ensuring that our initiatives are designed with, not just for, the people of Pakistan.
@@ -187,7 +187,7 @@ const About = () => {
                 <h3 className="text-xl font-semibold text-navy-900">Kamran Shah</h3>
                 <p className="text-amber-600 font-medium mb-1">Project Coordinator</p>
                 <p className="text-gray-600 text-sm">
-                  Bachelor of Economics
+                  Bachelor's of Economics
                 </p>
               </div>
             </div>
