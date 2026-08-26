@@ -222,10 +222,10 @@ const Home = () => {
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-8 text-navy-900">
-            Focused in Upper Swat, Built for Wider Impact
+            Local in Origin, Global in Impact
           </h2>
           <p className="text-lg mb-6 text-gray-700">
-            We began with rural communities in Upper Swat and are building a model for scalable, collaborative impact across Pakistan and beyond.
+            We began with rural communities in Swat and are building a model for scalable, collaborative impact across Pakistan and beyond.
           </p>
           <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden">
             {/* Placeholder for map or image */}
