@@ -182,6 +182,6 @@ export const allActivities = [
     stat: `${impactStats.communityMembersEngaged} community members engaged`,
     photo: '/images/activities/cleanliness-drive.jpg',
     blog:
-      'Armed with gloves and bin bags, our volunteers and student partners spent the morning clearing litter from streets and public spaces around the community. Beyond the clean-up itself, the drive became a chance to talk directly with residents and shopkeepers about waste segregation and why keeping shared spaces clean matters for everyone\u2019s health and the local environment.',
+      'Our team of volunteers gathered along the banks of the Swat River, gloves and bags in hand, for a hands-on cleanliness drive. Together they cleared plastic waste and litter that had built up along the riverbank, working section by section until a visible stretch of shoreline was clean again. It was a reminder of how directly local waste habits affect the river the whole community depends on, and a small but real step toward protecting it.',
   },
 ];
