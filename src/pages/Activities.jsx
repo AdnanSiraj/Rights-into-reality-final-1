@@ -23,13 +23,30 @@ const Activities = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           {allActivities.map((activity, i) => (
             <Reveal key={activity.slug} delay={i * 80}>
-              <div id={activity.slug} className="bg-white rounded-lg shadow p-8 scroll-mt-24">
-                <div className="flex items-start gap-4">
-                  <div className="text-amber-400 text-4xl">{activity.icon}</div>
-                  <div>
-                    <h2 className="text-2xl font-bold text-navy-900 mb-2">{activity.title}</h2>
-                    <p className="text-gray-700 leading-relaxed">{activity.description}</p>
-                    <p className="mt-4 text-sm font-medium text-amber-600">{activity.stat}</p>
+              <div id={activity.slug} className="bg-white rounded-lg shadow overflow-hidden scroll-mt-24">
+                {activity.photo ? (
+                  <img
+                    src={activity.photo}
+                    alt={activity.title}
+                    className="w-full h-64 object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-64 bg-navy-50 flex flex-col items-center justify-center text-navy-300">
+                    <div className="text-5xl mb-2">{activity.icon}</div>
+                    <span className="text-sm">Photo coming soon</span>
+                  </div>
+                )}
+                <div className="p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="text-amber-400 text-4xl">{activity.icon}</div>
+                    <div>
+                      <h2 className="text-2xl font-bold text-navy-900 mb-2">{activity.title}</h2>
+                      <p className="text-gray-700 leading-relaxed">{activity.description}</p>
+                      {activity.blog && (
+                        <p className="text-gray-600 leading-relaxed mt-4 italic">{activity.blog}</p>
+                      )}
+                      <p className="mt-4 text-sm font-medium text-amber-600">{activity.stat}</p>
+                    </div>
                   </div>
                 </div>
               </div>
