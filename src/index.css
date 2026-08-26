@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply font-sans text-gray-700 bg-white antialiased;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold text-navy-900;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  a {
+    @apply transition-colors;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme('colors.amber.500');
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Consistent card surface used across pages via bg-white + shadow */
+  .shadow {
+    box-shadow: 0 1px 2px 0 rgba(14, 27, 46, 0.06), 0 4px 12px -2px rgba(14, 27, 46, 0.08);
+  }
+}
+
+/* Subtle, professional motion: hero fade-in and slow background zoom */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out both;
+}
+
+@keyframes hero-zoom {
+  from { transform: scale(1.08); }
+  to { transform: scale(1); }
+}
+.animate-hero-zoom {
+  animation: hero-zoom 8s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up,
+  .animate-hero-zoom {
+    animation: none !important;
+  }
+}
