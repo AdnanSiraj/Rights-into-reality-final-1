@@ -26,8 +26,6 @@ const GetInvolved = () => {
     }));
   };
 
-  // Used by the Volunteer / Partner / Donate buttons — pre-selects the
-  // matching option in the form's dropdown and scrolls the form into view.
   const goToForm = (interest) => {
     setFormState(prev => ({ ...prev, interest }));
     formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -60,7 +58,6 @@ const GetInvolved = () => {
     <div>
       <Hero title="Get Involved" />
 
-      {/* Introduction */}
       <section className="bg-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-gray-700 text-lg leading-relaxed text-center">
@@ -69,7 +66,6 @@ const GetInvolved = () => {
         </div>
       </section>
 
-      {/* Volunteer Section */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12 text-navy-900">
@@ -112,7 +108,6 @@ const GetInvolved = () => {
         </div>
       </section>
 
-      {/* Partner Section */}
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12 text-navy-900">
@@ -158,7 +153,6 @@ const GetInvolved = () => {
         </div>
       </section>
 
-      {/* Donate Section */}
       <section className="bg-amber-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-8 text-navy-900">
@@ -168,12 +162,7 @@ const GetInvolved = () => {
             Your donation helps us continue our vital work in education, climate action, human rights, and youth leadership.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            
-              href={contactInfo.whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-navy-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-navy-800 transition-colors"
-            >
+            <a href={contactInfo.whatsappLink} target="_blank" rel="noopener noreferrer" className="bg-navy-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-navy-800 transition-colors">
               Contact Us to Donate
             </a>
             <button
@@ -190,13 +179,11 @@ const GetInvolved = () => {
         </div>
       </section>
 
-      {/* Contact / Interest Form */}
       <section ref={formRef} className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12 text-navy-900">
             Contact Us
           </h2>
-          {/* Form Status Messages */}
           {submitStatus === 'success' && (
             <div className="mb-6 p-4 bg-amber-100 text-amber-800 rounded-lg">
               Thank you for your message! We'll get back to you soon.
