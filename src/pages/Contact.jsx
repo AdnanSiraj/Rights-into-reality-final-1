@@ -4,6 +4,10 @@ import Reveal from '../components/Reveal.jsx';
 import { SocialLinks, WhatsAppIcon } from '../components/SocialIcons.jsx';
 import { contactInfo } from '../data/orgData.js';
 
+// Web3Forms — submissions are emailed straight to info@rightsintoreality.org.
+const WEB3FORMS_ACCESS_KEY = '6c93a1bf-8c39-4016-899c-12d43b9b806d';
+const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
+
 const Contact = () => {
   const [formState, setFormState] = useState({
     name: '',
@@ -25,12 +29,18 @@ const Contact = () => {
     e.preventDefault();
     setSubmitStatus('submitting');
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formState, source: 'Contact Page' }),
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: formState.subject || `New website message from ${formState.name}`,
+          source: 'Contact Page',
+          ...formState,
+        }),
       });
-      if (!response.ok) throw new Error('Request failed');
+      const result = await response.json();
+      if (!result.success) throw new Error('Request failed');
       setSubmitStatus('success');
       setFormState({ name: '', email: '', subject: '', message: '' });
     } catch (err) {
@@ -164,7 +174,7 @@ const Contact = () => {
                 </p>
                 <p className="text-gray-700 mb-2 flex items-center gap-2">
                   <span className="font-medium">WhatsApp:</span>
-                  <a
+                  
                     href={contactInfo.whatsappLink}
                     target="_blank"
                     rel="noopener noreferrer"
