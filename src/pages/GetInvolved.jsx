@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero.jsx';
 import Reveal from '../components/Reveal.jsx';
@@ -16,6 +16,7 @@ const GetInvolved = () => {
     message: ''
   });
   const [submitStatus, setSubmitStatus] = useState(null); // null, 'success', 'error'
+  const formRef = useRef(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,6 +24,13 @@ const GetInvolved = () => {
       ...prev,
       [name]: value
     }));
+  };
+
+  // Used by the Volunteer / Partner / Donate buttons — pre-selects the
+  // matching option in the form's dropdown and scrolls the form into view.
+  const goToForm = (interest) => {
+    setFormState(prev => ({ ...prev, interest }));
+    formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const handleSubmit = async (e) => {
@@ -93,6 +101,14 @@ const GetInvolved = () => {
               </p>
             </div>
           </div>
+          <div className="text-center mt-10">
+            <button
+              onClick={() => goToForm('volunteering')}
+              className="bg-navy-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-navy-800 transition-colors"
+            >
+              Volunteer Now
+            </button>
+          </div>
         </div>
       </section>
 
@@ -131,6 +147,14 @@ const GetInvolved = () => {
               </p>
             </div>
           </div>
+          <div className="text-center mt-10">
+            <button
+              onClick={() => goToForm('partnering')}
+              className="bg-navy-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-navy-800 transition-colors"
+            >
+              Become a Partner
+            </button>
+          </div>
         </div>
       </section>
 
@@ -152,16 +176,22 @@ const GetInvolved = () => {
             >
               Contact Us to Donate
             </a>
-            <p className="text-sm text-gray-600">
-              Online donation processing is coming soon — for now, message us on WhatsApp or email{' '}
-              <a href={`mailto:${contactInfo.email}`} className="underline">{contactInfo.email}</a> to arrange a donation.
-            </p>
+            <button
+              onClick={() => goToForm('donating')}
+              className="bg-white text-navy-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors border border-navy-900"
+            >
+              Fill the Form Instead
+            </button>
           </div>
+          <p className="text-sm text-gray-600 mt-4">
+            Online donation processing is coming soon — for now, message us on WhatsApp or email{' '}
+            <a href={`mailto:${contactInfo.email}`} className="underline">{contactInfo.email}</a> to arrange a donation.
+          </p>
         </div>
       </section>
 
       {/* Contact / Interest Form */}
-      <section className="bg-white py-16">
+      <section ref={formRef} className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12 text-navy-900">
             Contact Us
