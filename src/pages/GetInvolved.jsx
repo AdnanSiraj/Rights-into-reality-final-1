@@ -4,6 +4,10 @@ import Hero from '../components/Hero.jsx';
 import Reveal from '../components/Reveal.jsx';
 import { contactInfo } from '../data/orgData.js';
 
+// Web3Forms — submissions are emailed straight to info@rightsintoreality.org.
+const WEB3FORMS_ACCESS_KEY = '6c93a1bf-8c39-4016-899c-12d43b9b806d';
+const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
+
 const GetInvolved = () => {
   const [formState, setFormState] = useState({
     name: '',
@@ -25,12 +29,18 @@ const GetInvolved = () => {
     e.preventDefault();
     setSubmitStatus('submitting');
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formState, source: 'Get Involved Page' }),
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New Get Involved submission from ${formState.name}`,
+          source: 'Get Involved Page',
+          ...formState,
+        }),
       });
-      if (!response.ok) throw new Error('Request failed');
+      const result = await response.json();
+      if (!result.success) throw new Error('Request failed');
       setSubmitStatus('success');
       setFormState({ name: '', email: '', interest: '', message: '' });
     } catch (err) {
@@ -134,7 +144,7 @@ const GetInvolved = () => {
             Your donation helps us continue our vital work in education, climate action, human rights, and youth leadership.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+            
               href={contactInfo.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
