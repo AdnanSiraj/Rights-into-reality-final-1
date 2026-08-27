@@ -164,10 +164,10 @@ const Home = () => {
                       src={activity.photo}
                       alt={activity.title}
                       loading="lazy"
-                      className="w-full h-40 object-cover object-top"
+                      className="w-full aspect-[4/3] object-cover object-center"
                     />
                   ) : (
-                    <div className="w-full h-40 bg-navy-50 flex items-center justify-center text-navy-300 text-4xl">
+                    <div className="w-full aspect-[4/3] bg-navy-50 flex items-center justify-center text-navy-300 text-4xl">
                       {activity.icon}
                     </div>
                   )}

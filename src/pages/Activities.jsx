@@ -29,10 +29,10 @@ const Activities = () => {
                     src={activity.photo}
                     alt={activity.title}
                     loading="lazy"
-                    className="w-full h-64 object-cover object-top"
+                    className="w-full aspect-[4/3] object-cover object-center"
                   />
                 ) : (
-                  <div className="w-full h-64 bg-navy-50 flex flex-col items-center justify-center text-navy-300">
+                  <div className="w-full aspect-[4/3] bg-navy-50 flex flex-col items-center justify-center text-navy-300">
                     <div className="text-5xl mb-2">{activity.icon}</div>
                     <span className="text-sm">Photo coming soon</span>
                   </div>
