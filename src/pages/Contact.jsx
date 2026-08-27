@@ -174,7 +174,7 @@ const Contact = () => {
                 </p>
                 <p className="text-gray-700 mb-2 flex items-center gap-2">
                   <span className="font-medium">WhatsApp:</span>
-                  
+                  <a
                     href={contactInfo.whatsappLink}
                     target="_blank"
                     rel="noopener noreferrer"
