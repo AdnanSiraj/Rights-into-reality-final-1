@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="bg-navy-900 text-white p-4 sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
         <Link to="/" className="flex items-center space-x-3 text-2xl font-bold" onClick={() => setOpen(false)}>
-          <img src="/logo.png" alt="Rights Into Reality logo" className="h-18 w-auto" />
+          <img src="/logo.png" alt="Rights Into Reality logo" className="h-14 w-auto" />
           <span className="text-amber-400">RIR</span>
           <span className="hidden sm:inline">Rights Into Reality</span>
         </Link>
