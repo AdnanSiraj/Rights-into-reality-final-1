@@ -36,7 +36,7 @@ export const teamMembers = [
     name: 'Nasar Shah Mian',
     role: 'Co-Founder & Administrator',
     photo: '/team/member-2.jpg',
-    bio: 'A young environmental scientist with a research background in waste-to-energy, passionate about transforming environmental challenges into practical solutions and empowering communities for sustainable development. Digitally literate, with a one-year Diploma in Information Technology and an IELTS Academic Band 7.0.',
+    bio: 'A young environmental scientist with a research background in waste-to-energy, passionate about transforming environmental challenges into practical solutions and empowering communities for sustainable development. Digitally literate, with a one-year Diploma in Information Technology, and an IELTS Academic Band 7.0.',
     cv: '/team/cv/nasar-shah-mian-cv.pdf',
   },
   {
