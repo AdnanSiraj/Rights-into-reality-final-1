@@ -17,10 +17,10 @@ const Navbar = () => {
   return (
     <nav className="bg-navy-900 text-white p-4 sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
-        <Link to="/" className="flex items-center space-x-3 text-2xl font-bold" onClick={() => setOpen(false)}>
-          <img src="/logo.png" alt="Rights Into Reality logo" className="h-14 w-auto" />
+        <Link to="/" className="flex items-center space-x-2 sm:space-x-3 text-base sm:text-2xl font-bold" onClick={() => setOpen(false)}>
+          <img src="/logo.png" alt="Rights Into Reality logo" className="h-12 sm:h-14 w-auto bg-white rounded-lg p-1" />
           <span className="text-amber-400">RIR</span>
-          <span className="hidden sm:inline">Rights Into Reality</span>
+          <span className="leading-tight">Rights Into Reality</span>
         </Link>
 
         {/* Mobile menu toggle */}
