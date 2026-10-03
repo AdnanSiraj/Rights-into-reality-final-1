@@ -148,7 +148,7 @@ export const allActivities = [
     title: 'Climate Change Education',
     description:
       'Alongside the legal rights sessions, we delivered climate change workshops explaining the science of a warming climate and, more importantly, what students and their communities can do about it — from reducing waste to protecting green spaces.',
-    stat: `${impactStats.workshopsConducted} workshops conducted since ${impactStats.since}`,
+    stat: `${impactStats.studentsReached} students reached`,
     photo: '/images/activities/Climate-Change-Education.jpeg',
     blog: null,
   },
@@ -158,7 +158,7 @@ export const allActivities = [
     title: 'Digital Literacy Sessions',
     description:
       'Our digital literacy sessions cover safe and responsible technology use, from basic computer skills to online safety, giving students practical tools for a digitally connected world.',
-    stat: `${impactStats.communityMembersEngaged} community members engaged`,
+    stat: `${impactStats.studentsReached} students reached`,
     photo: '/images/activities/Digital-literacy-sessions.jpeg',
     blog: null,
   },
