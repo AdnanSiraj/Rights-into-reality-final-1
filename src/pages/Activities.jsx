@@ -34,7 +34,7 @@ const Activities = () => {
                 ) : (
                   <div className="w-full aspect-[4/3] bg-navy-50 flex flex-col items-center justify-center text-navy-300">
                     <div className="text-5xl mb-2">{activity.icon}</div>
-                    <span className="text-sm">Photo coming soon</span>
+                    <span className="text-sm">activity.photo</span>
                   </div>
                 )}
                 <div className="p-8">
