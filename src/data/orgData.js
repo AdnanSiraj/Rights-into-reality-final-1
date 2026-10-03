@@ -13,10 +13,10 @@ export const contactInfo = {
 
 export const impactStats = {
   since: 'Feb 2026',
-  studentsReached: 62,
+  studentsReached: 241,
   treesPlanted: 80,
   workshopsConducted: 3,
-  communityMembersEngaged: 28,
+  communityMembersEngaged: 37,
   schoolsPartnered: [
     'Abdali Public School',
     'Global International School',
