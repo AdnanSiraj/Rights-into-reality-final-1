@@ -25,7 +25,7 @@ const Hero = ({ title, subtitle = 'Turning Rights into Reality', tagline, size =
       <div className="absolute inset-0 bg-gradient-to-b from-navy-900/85 via-navy-800/75 to-navy-900/85"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in-up">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-4">{title}</h1>
+        <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-white">{title}</h1>
         <p className="text-xl sm:text-2xl mb-2 text-amber-300">{subtitle}</p>
         {tagline && <p className="text-lg mt-4 max-w-2xl mx-auto text-navy-100">{tagline}</p>}
       </div>
