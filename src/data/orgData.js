@@ -97,7 +97,7 @@ export const featuredActivities = [
     title: 'Legal Rights Workshops',
     summary:
       'Interactive school sessions breaking down human rights and legal literacy for students at Abdali Public School, Global International School, and Golden Middle Public School.',
-    photo: null,
+    photo: '/images/activities/Legal-rights-workshops.jpeg',
   },
   {
     slug: 'climate-change-education',
@@ -105,7 +105,7 @@ export const featuredActivities = [
     title: 'Climate Change Education',
     summary:
       'Workshops helping students understand climate change and their role in building a more resilient, sustainable Swat.',
-    photo: null,
+    photo: '/images/activities/Climate-Change-Education.jpeg',
   },
   {
     slug: 'tree-plantation-drives',
@@ -139,7 +139,7 @@ export const allActivities = [
     description:
       'We ran interactive legal-rights workshops at Abdali Public School, Global International School, and Golden Middle Public School, helping students understand their fundamental rights and how the law protects them. Sessions used real-world scenarios and discussion rather than lectures, so students left with knowledge they could actually apply.',
     stat: `${impactStats.studentsReached} students reached`,
-    photo: null,
+    photo: '/images/activities/Legal-rights-workshops.jpeg',
     blog: null,
   },
   {
@@ -149,7 +149,7 @@ export const allActivities = [
     description:
       'Alongside the legal rights sessions, we delivered climate change workshops explaining the science of a warming climate and, more importantly, what students and their communities can do about it — from reducing waste to protecting green spaces.',
     stat: `${impactStats.workshopsConducted} workshops conducted since ${impactStats.since}`,
-    photo: null,
+    photo: '/images/activities/Climate-Change-Education.jpeg',
     blog: null,
   },
   {
@@ -159,7 +159,7 @@ export const allActivities = [
     description:
       'Our digital literacy sessions cover safe and responsible technology use, from basic computer skills to online safety, giving students practical tools for a digitally connected world.',
     stat: `${impactStats.communityMembersEngaged} community members engaged`,
-    photo: null,
+    photo: '/images/activities/Digital-literacy-sessions.jpeg',
     blog: null,
   },
   {
